@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyDeee9La-dhJNsj0L1Pu9Rbp7_6kIJCAMI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>312806229592</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.alekssamson.Flirt-Funk</string>
+	<key>PROJECT_ID</key>
+	<string>flirtfunk</string>
+	<key>STORAGE_BUCKET</key>
+	<string>flirtfunk.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:312806229592:ios:8d5d4d53fd1f498baa2c2d</string>
+</dict>
+</plist>
