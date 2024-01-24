@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct BrandingImage: View {
+    
+    var size: CGFloat = 150
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+       Image("fire")
+            .resizable()
+            .frame(width: size, height: size)
+            .padding()
     }
 }
 

@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct Error {
+    var content: String
+    var display = true
+}

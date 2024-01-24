@@ -6,3 +6,5 @@
 //
 
 import Foundation
+
+let COLLECTION_USER = "user"

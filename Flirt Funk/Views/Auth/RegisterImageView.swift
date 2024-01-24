@@ -8,8 +8,20 @@
 import SwiftUI
 
 struct RegisterImageView: View {
+    @EnvironmentObject var viewModel: AuthViewModel
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("This is register image view")
+            
+            Button {
+                viewModel.skipRegistrationFlow()
+                dismiss()
+            } label: {
+                Text("Skip registration flow")
+            }
+        }
     }
 }
 

@@ -60,6 +60,20 @@ struct CardView: View {
                     .foregroundColor(.white)
                 }
                 .padding()
+                // like or nope to Picture
+                HStack {
+                    Image("like")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 150)
+                        .opacity(Double(card.x / 10 - 1))
+                    Spacer()
+                    Image("nope")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 150)
+                       .opacity(Double(card.x / 10 * -1 - 1))
+                }
             }
             .background(.black)
             .cornerRadius(16)
@@ -102,6 +116,10 @@ struct CardView: View {
             HStack {
                 Spacer()
                 Button {
+                    withAnimation(.interpolatingSpring(mass: 1, stiffness: 50, damping: 5, initialVelocity: 0)) {
+                        card.degree = -12
+                        card.x = -1000
+                    }
                 } label: {
                     Image("dismiss_circle")
                         .resizable()
@@ -110,6 +128,10 @@ struct CardView: View {
                 
                 Spacer()
                 Button {
+                    withAnimation(.interpolatingSpring(mass: 1, stiffness: 50, damping: 5, initialVelocity: 0)) {
+                        card.degree = 12
+                        card.x = 1000
+                    }
                 } label: {
                     Image("like_circle")
                         .resizable()

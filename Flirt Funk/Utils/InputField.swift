@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FlirtFunkInputField: View {
+struct InputField: View {
     
     let imageName: String
     @State var placeholderText: String
@@ -38,6 +38,6 @@ struct FlirtFunkInputField: View {
 }
 
 #Preview {
-    FlirtFunkInputField(imageName: "envelope", placeholderText: "email", text: .constant(""))
+    InputField(imageName: "envelope", placeholderText: "email", text: .constant(""))
         .previewLayout(.sizeThatFits)
 }

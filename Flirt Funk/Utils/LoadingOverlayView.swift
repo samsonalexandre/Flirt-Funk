@@ -9,7 +9,15 @@ import SwiftUI
 
 struct LoadingOverlayView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            HStack {
+                Spacer()
+            }
+            Spacer()
+            ProgressView()
+            Spacer()
+        }
+        .background(Color.black.opacity(0.25))
     }
 }
 
