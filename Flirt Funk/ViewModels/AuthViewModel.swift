@@ -7,6 +7,8 @@
 
 import Foundation
 import Combine
+import SwiftUI
+import PhotosUI
 
 @MainActor
 class AuthViewModel: ObservableObject {
@@ -20,6 +22,9 @@ class AuthViewModel: ObservableObject {
     @Published var currentUser = AuthService.shared.currentUser
     
     @Published var signupFlowActive = AuthService.shared.signupFlowActive
+    
+    @Published var selectedImage: PhotosPickerItem?
+    @Published var profileImage = AuthService.shared.profileImage
     
     init() {
         auth.signout()
@@ -44,6 +49,11 @@ class AuthViewModel: ObservableObject {
         
         auth.$signupFlowActive.sink { [weak self] signupFlowActive in
             self?.signupFlowActive = signupFlowActive
+        }
+        .store(in: &cancellables)
+        
+        auth.$profileImage.sink { [weak self] profileImage in
+            self?.profileImage = profileImage
         }
         .store(in: &cancellables)
     }

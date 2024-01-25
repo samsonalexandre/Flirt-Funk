@@ -8,6 +8,8 @@
 import Foundation
 import Firebase
 import FirebaseFirestoreSwift
+import SwiftUI
+import PhotosUI
 
 class AuthService {
     static let shared = AuthService()
@@ -17,6 +19,8 @@ class AuthService {
     @Published var errorEvent = Error(content: "", display: false)
     
     @Published var signupFlowActive = false
+    
+    @Published var profileImage: Image?
     
     init() {
         Task {
