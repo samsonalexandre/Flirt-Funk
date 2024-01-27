@@ -16,6 +16,8 @@ class AuthViewModel: ObservableObject {
     @Published var email = ""
     @Published var password = ""
     @Published var name = ""
+    @Published var age = 18
+    
     @Published var isLoading = AuthService.shared.isLoading
     private var cancellables = Set<AnyCancellable> ()
     @Published var errorEvent = AuthService.shared.errorEvent

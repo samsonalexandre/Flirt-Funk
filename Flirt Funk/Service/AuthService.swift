@@ -102,7 +102,8 @@ class AuthService {
                     "profileImageUrl": imageUrl
                 ]
                 try await Firestore.firestore()
-                    .collection(COLLECTION_USER).document(currentUser.id).updateData(data)
+                    //.collection(COLLECTION_USER).document(currentUser.id).updateData(data)
+                    .collection(COLLECTION_USER).document(currentUser.id).updateData(data as [AnyHashable : Any])
             }
         } catch {
             print("DEBUG: Failed to upload image with error \(error.localizedDescription)")

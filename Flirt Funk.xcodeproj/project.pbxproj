@@ -39,6 +39,9 @@
 		966C26862B650CEF00C98D90 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966C26852B650CEF00C98D90 /* ImageUploader.swift */; };
 		966C26892B650D3200C98D90 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 966C26882B650D3200C98D90 /* FirebaseStorage */; };
 		966C268B2B65126000C98D90 /* RegisterAgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966C268A2B65126000C98D90 /* RegisterAgeView.swift */; };
+		966C268D2B654B7600C98D90 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966C268C2B654B7600C98D90 /* Gender.swift */; };
+		966C268F2B654CC800C98D90 /* Interests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966C268E2B654CC800C98D90 /* Interests.swift */; };
+		966C26912B65717B00C98D90 /* RegisterGenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966C26902B65717B00C98D90 /* RegisterGenderView.swift */; };
 		968ED1F62B613C43000234A7 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968ED1F52B613C43000234A7 /* UserService.swift */; };
 		968ED1F82B614E8B000234A7 /* RegisterImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968ED1F72B614E8B000234A7 /* RegisterImageView.swift */; };
 		96A8C0E82B62DF1000A049FF /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 96A8C0E72B62DF1000A049FF /* FirebaseAnalytics */; };
@@ -69,6 +72,9 @@
 		966AD4242B60146F00AAAA69 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		966C26852B650CEF00C98D90 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		966C268A2B65126000C98D90 /* RegisterAgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAgeView.swift; sourceTree = "<group>"; };
+		966C268C2B654B7600C98D90 /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
+		966C268E2B654CC800C98D90 /* Interests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interests.swift; sourceTree = "<group>"; };
+		966C26902B65717B00C98D90 /* RegisterGenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterGenderView.swift; sourceTree = "<group>"; };
 		968ED1F52B613C43000234A7 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		968ED1F72B614E8B000234A7 /* RegisterImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterImageView.swift; sourceTree = "<group>"; };
 		96AF07462B5ECC7500D54522 /* Flirt Funk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flirt Funk.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +129,7 @@
 				966AD4162B5FC2C500AAAA69 /* RegisterView.swift */,
 				968ED1F72B614E8B000234A7 /* RegisterImageView.swift */,
 				966C268A2B65126000C98D90 /* RegisterAgeView.swift */,
+				966C26902B65717B00C98D90 /* RegisterGenderView.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -184,6 +191,8 @@
 				96AF075E2B5ED29400D54522 /* Card.swift */,
 				966AD4202B5FDE3100AAAA69 /* Collections.swift */,
 				966AD4242B60146F00AAAA69 /* Error.swift */,
+				966C268C2B654B7600C98D90 /* Gender.swift */,
+				966C268E2B654CC800C98D90 /* Interests.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -329,6 +338,7 @@
 				966AD41D2B5FC4AA00AAAA69 /* BrandingImage.swift in Sources */,
 				966AD4232B60062300AAAA69 /* LoadingOverlayView.swift in Sources */,
 				966C26862B650CEF00C98D90 /* ImageUploader.swift in Sources */,
+				966C268F2B654CC800C98D90 /* Interests.swift in Sources */,
 				966AD4152B5FC29F00AAAA69 /* LoginView.swift in Sources */,
 				96AF074C2B5ECC7500D54522 /* ContentView.swift in Sources */,
 				966C268B2B65126000C98D90 /* RegisterAgeView.swift in Sources */,
@@ -338,11 +348,13 @@
 				966AD41F2B5FC56A00AAAA69 /* InputField.swift in Sources */,
 				966AD41B2B5FC2FA00AAAA69 /* AuthService.swift in Sources */,
 				966AD4172B5FC2C500AAAA69 /* RegisterView.swift in Sources */,
+				966C26912B65717B00C98D90 /* RegisterGenderView.swift in Sources */,
 				966AD4192B5FC2E200AAAA69 /* AuthViewModel.swift in Sources */,
 				96AF075D2B5ECF6B00D54522 /* User.swift in Sources */,
 				968ED1F62B613C43000234A7 /* UserService.swift in Sources */,
 				96AF07612B5EE2F900D54522 /* SwipeView.swift in Sources */,
 				966AD4252B60146F00AAAA69 /* Error.swift in Sources */,
+				966C268D2B654B7600C98D90 /* Gender.swift in Sources */,
 				96AF075F2B5ED29400D54522 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

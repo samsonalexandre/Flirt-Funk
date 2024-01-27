@@ -14,6 +14,12 @@ struct User: Identifiable, Codable, Hashable {
     var age: Int?
     var bio: String?
     var profileImageUrl: String?
+    var gender: String = Gender.unspecified.rawValue
+    var preference: String = Gender.unspecified.rawValue
+    var interests: Array<String> = []
+    var swipesLeft: Array<String> = []
+    var swipesRight: Array<String> = []
+    var matches: Array<String> = []
     
     static let mockUsers: [User] = [
         .init(id: NSUUID().uuidString, email: "u1@gmail.com", name: "u1", age: 29, bio: "u1bio", profileImageUrl: "ai_man1"),

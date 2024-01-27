@@ -12,7 +12,7 @@ struct Card: Identifiable, Hashable {
     let user: User
     var x: CGFloat = 0.0
     var y: CGFloat = 0.0
-    var degree: Double = 0.0
+    var degree: Double = 0.0 
     
     static var mockData: [Card] = [
         Card(user: User.mockUsers[0]),
