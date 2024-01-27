@@ -20,6 +20,7 @@ class AuthViewModel: ObservableObject {
     @Published var gender: Gender = .unspecified
     @Published var preference: Gender = .unspecified
     @Published var lookingFor: Gender = .unspecified
+    @Published var bio = ""
     
     @Published var isLoading = AuthService.shared.isLoading
     private var cancellables = Set<AnyCancellable> ()
