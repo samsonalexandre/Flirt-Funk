@@ -21,6 +21,7 @@ class AuthService {
     @Published var signupFlowActive = false
     
     @Published var profileImage: Image?
+    private var uiImage: UIImage?
     
     init() {
         Task {
@@ -79,5 +80,33 @@ class AuthService {
         userSession = Auth.auth().currentUser
         guard let uid = self.userSession?.uid else { return }
         currentUser = try await UserService.fetchUser(withUid: uid)
+    }
+    
+    @MainActor
+    func loadImageFromItem(item: PhotosPickerItem?) async {
+        guard let item = item else { return }
+        guard let data = try? await item.loadTransferable(type: Data.self) else { return }
+        guard let uiImage = UIImage(data: data) else { return }
+        self.uiImage = uiImage
+        self.profileImage = Image(uiImage: uiImage)
+    }
+    
+    @MainActor
+    func uploadUserImage() async {
+        guard let currentUser = currentUser else { return }
+        
+        do {
+            if let uiImage = uiImage {
+                let imageUrl = try? await ImageUploader.uploadImage(image: uiImage)
+                let data = [
+                    "profileImageUrl": imageUrl
+                ]
+                try await Firestore.firestore()
+                    .collection(COLLECTION_USER).document(currentUser.id).updateData(data)
+            }
+        } catch {
+            print("DEBUG: Failed to upload image with error \(error.localizedDescription)")
+            errorEvent = Error(content: error.localizedDescription)
+        }
     }
 }

@@ -23,7 +23,13 @@ class AuthViewModel: ObservableObject {
     
     @Published var signupFlowActive = AuthService.shared.signupFlowActive
     
-    @Published var selectedImage: PhotosPickerItem?
+    @Published var selectedImage: PhotosPickerItem? {
+        didSet {
+            Task {
+                await auth.loadImageFromItem(item: selectedImage)
+            }
+        }
+    }
     @Published var profileImage = AuthService.shared.profileImage
     
     init() {
@@ -73,5 +79,9 @@ class AuthViewModel: ObservableObject {
     
     func skipRegistrationFlow() {
         signupFlowActive = false
+    }
+    
+    func uploadUserImage() async throws {
+        await auth.uploadUserImage()
     }
 }
