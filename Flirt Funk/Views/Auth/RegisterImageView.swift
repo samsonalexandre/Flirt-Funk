@@ -13,7 +13,7 @@ struct RegisterImageView: View {
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 Text("Step 1 of 6")
                     .font(.footnote)
