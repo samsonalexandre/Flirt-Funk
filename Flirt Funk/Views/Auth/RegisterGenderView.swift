@@ -49,7 +49,7 @@ struct RegisterGenderView: View {
                     Text("Looking for")
                         .padding(.trailing)
                         .frame(width: 150, alignment: .trailing)
-                    Picker("Coose", selection: $viewModel.lookingFor) {
+                    Picker("Coose", selection: $viewModel.preference) {
                         ForEach(Gender.allCases) { gender in
                             switch gender {
                             case Gender.man: Text("Men")
