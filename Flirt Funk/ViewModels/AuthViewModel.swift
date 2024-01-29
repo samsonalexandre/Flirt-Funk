@@ -20,6 +20,7 @@ class AuthViewModel: ObservableObject {
     @Published var gender: Gender = .unspecified
     @Published var preference: Gender = .unspecified
     @Published var bio = ""
+    @Published var interests: Set<String> = []
     
     @Published var isLoading = AuthService.shared.isLoading
     private var cancellables = Set<AnyCancellable> ()
@@ -88,5 +89,20 @@ class AuthViewModel: ObservableObject {
     
     func uploadUserImage() async throws {
         await auth.uploadUserImage()
+    }
+    
+    func completeRegistrationFlow() async throws {
+        await auth.completeRegistrationFlow(age: age, bio: bio, gender: gender, preference: preference, interests: interests)
+        
+        email = ""
+        password = ""
+        name = ""
+        age = 18
+        gender = .unspecified
+        preference = .unspecified
+        bio = ""
+        interests = []
+        selectedImage = nil
+        profileImage = nil
     }
 }

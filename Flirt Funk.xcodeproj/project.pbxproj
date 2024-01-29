@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		96193FE92B6394FD00948AB5 /* Abschlussaufgabe.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 96193FE82B6394FD00948AB5 /* Abschlussaufgabe.pdf */; };
+		963484242B67896000204348 /* RegisterCompletionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963484232B67896000204348 /* RegisterCompletionView.swift */; };
 		966AD3ED2B5FC01900AAAA69 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 966AD3EC2B5FC01900AAAA69 /* GoogleService-Info.plist */; };
 		966AD3F02B5FC06D00AAAA69 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 966AD3EF2B5FC06D00AAAA69 /* FirebaseAnalytics */; };
 		966AD3F22B5FC06D00AAAA69 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 966AD3F12B5FC06D00AAAA69 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -62,6 +63,7 @@
 
 /* Begin PBXFileReference section */
 		96193FE82B6394FD00948AB5 /* Abschlussaufgabe.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Abschlussaufgabe.pdf; sourceTree = "<group>"; };
+		963484232B67896000204348 /* RegisterCompletionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCompletionView.swift; sourceTree = "<group>"; };
 		966AD3EC2B5FC01900AAAA69 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		966AD4142B5FC29F00AAAA69 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		966AD4162B5FC2C500AAAA69 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				966C26902B65717B00C98D90 /* RegisterGenderView.swift */,
 				966C26922B657A1700C98D90 /* RegisterBioView.swift */,
 				966C26942B6586F000C98D90 /* RegisterInterestsView.swift */,
+				963484232B67896000204348 /* RegisterCompletionView.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				966AD41D2B5FC4AA00AAAA69 /* BrandingImage.swift in Sources */,
+				963484242B67896000204348 /* RegisterCompletionView.swift in Sources */,
 				966AD4232B60062300AAAA69 /* LoadingOverlayView.swift in Sources */,
 				966C26862B650CEF00C98D90 /* ImageUploader.swift in Sources */,
 				966C26952B6586F000C98D90 /* RegisterInterestsView.swift in Sources */,

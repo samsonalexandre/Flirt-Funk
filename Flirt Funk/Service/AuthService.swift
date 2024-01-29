@@ -110,4 +110,33 @@ class AuthService {
             errorEvent = Error(content: error.localizedDescription)
         }
     }
+    
+    @MainActor
+    func completeRegistrationFlow(age: Int, bio: String, gender: Gender, preference: Gender, interests: Set<String>) async {
+        guard let currentUser = currentUser else { return }
+        isLoading = true
+        
+        do {
+            let data = [
+                "age": age,
+                "bio": bio,
+                "gender": gender.rawValue,
+                "preference": preference.rawValue,
+                "interests": Array(interests)
+            ] as [String: Any]
+            
+            try await Firestore.firestore().collection(COLLECTION_USER).document(currentUser.id).updateData(data)
+            
+            try await fetchUser()
+            
+        } catch {
+            print("DEBUG: Failed to set data with error \(error.localizedDescription)")
+            errorEvent = Error(content: error.localizedDescription)
+        }
+        
+        isLoading = false
+        signupFlowActive = false
+        profileImage = nil
+        uiImage = nil
+    }
 }

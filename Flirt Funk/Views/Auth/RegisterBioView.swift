@@ -28,7 +28,7 @@ struct RegisterBioView: View {
                 Divider()
                 
                 TextEditor(text: $viewModel.bio)
-                    .frame(width: 300, height: 150, alignment: .topLeading)
+                    .frame(width: 350, height: 150, alignment: .topLeading)
                     .overlay(
                         RoundedRectangle(cornerRadius: 6)
                             .stroke(Color(.gray), lineWidth: 1)
